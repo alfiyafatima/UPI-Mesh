@@ -1,0 +1,15 @@
+.panel { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 20px; }
+.heading { font-family: var(--mono); font-size: 13px; color: var(--accent); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 16px; }
+.empty { color: var(--text-muted); font-family: var(--mono); font-size: 12px; }
+.tableWrap { overflow-x: auto; }
+.table { width: 100%; border-collapse: collapse; font-size: 12px; }
+.table th { font-family: var(--mono); font-size: 10px; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted); text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--border); }
+.table td { padding: 8px 10px; border-bottom: 1px solid rgba(42,42,58,0.5); color: var(--text); }
+.table tr:hover td { background: var(--surface2); }
+.hash { font-family: var(--mono); color: var(--text-muted); }
+.amount { font-family: var(--mono); font-weight: 700; color: var(--accent); }
+.ts { font-family: var(--mono); color: var(--text-muted); font-size: 11px; }
+.badge { display: inline-block; padding: 2px 8px; border-radius: 4px; font-family: var(--mono); font-size: 10px; font-weight: 700; letter-spacing: 1px; }
+.badge.settled { background: rgba(16,185,129,0.15); color: var(--success); }
+.badge.rejected { background: rgba(239,68,68,0.15); color: var(--danger); }
+.badge.duplicate { background: rgba(245,158,11,0.15); color: var(--warning); }

@@ -1,0 +1,12 @@
+{
+  "name": "upi-mesh-mern",
+  "version": "1.0.0",
+  "description": "UPI Without Internet — MERN conversion of perryvegehan/UPI_Without_Internet (Spring Boot → Node/Express/React/MongoDB)",
+  "scripts": {
+    "install:all": "cd backend && npm install && cd ../frontend && npm install",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm start",
+    "start:backend": "cd backend && npm start",
+    "build:frontend": "cd frontend && npm run build"
+  }
+}

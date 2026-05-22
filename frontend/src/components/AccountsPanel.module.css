@@ -1,0 +1,8 @@
+.panel { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 20px; }
+.heading { font-family: var(--mono); font-size: 13px; color: var(--accent); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 16px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 12px; }
+.card { background: var(--surface2); border: 1px solid var(--border); border-radius: 8px; padding: 14px; transition: border-color 0.2s; }
+.card:hover { border-color: var(--accent); }
+.name { font-weight: 600; font-size: 15px; margin-bottom: 4px; }
+.upi { font-family: var(--mono); font-size: 11px; color: var(--text-muted); margin-bottom: 10px; }
+.balance { font-family: var(--mono); font-size: 20px; color: var(--accent); font-weight: 700; }

@@ -1,0 +1,88 @@
+.app { min-height: 100vh; display: flex; flex-direction: column; }
+
+.header {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: 0 24px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.headerInner { max-width: 1400px; margin: 0 auto; height: 64px; display: flex; align-items: center; justify-content: space-between; }
+.logo { font-family: var(--mono); font-size: 18px; font-weight: 700; color: var(--accent); letter-spacing: -1px; }
+.subtitle { font-size: 11px; color: var(--text-muted); font-family: var(--mono); margin-top: 2px; }
+.headerActions { display: flex; align-items: center; gap: 14px; }
+.badge { display: flex; align-items: center; gap: 6px; font-family: var(--mono); font-size: 11px; color: var(--success); }
+.dot { width: 7px; height: 7px; background: var(--success); border-radius: 50%; animation: pulse 2s infinite; }
+@keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
+.resetBtn {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  border-radius: 6px;
+  padding: 6px 14px;
+  font-family: var(--mono);
+  font-size: 11px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.resetBtn:hover:not(:disabled) { border-color: var(--danger); color: var(--danger); }
+.resetBtn:disabled { opacity: 0.4; }
+
+.banner {
+  background: rgba(0,229,255,0.05);
+  border-bottom: 1px solid rgba(0,229,255,0.15);
+  padding: 10px 24px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+.bannerIcon { font-size: 14px; }
+
+.error {
+  background: rgba(239,68,68,0.1);
+  border-bottom: 1px solid rgba(239,68,68,0.3);
+  padding: 10px 24px;
+  color: var(--danger);
+  font-family: var(--mono);
+  font-size: 12px;
+}
+
+.main {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 24px;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+  align-items: start;
+}
+.col { display: flex; flex-direction: column; gap: 20px; }
+
+.loading {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  color: var(--text-muted);
+  font-family: var(--mono);
+}
+.spinner {
+  width: 36px;
+  height: 36px;
+  border: 3px solid var(--border);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+@media (max-width: 900px) {
+  .main { grid-template-columns: 1fr; padding: 16px; }
+}

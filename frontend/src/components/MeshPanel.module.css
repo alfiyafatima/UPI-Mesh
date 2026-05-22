@@ -1,0 +1,58 @@
+.panel { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 20px; }
+.heading { font-family: var(--mono); font-size: 13px; color: var(--accent); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 16px; }
+.deviceGrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 10px; margin-bottom: 16px; }
+.device {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px;
+  text-align: center;
+  position: relative;
+}
+.bridge { border-color: var(--accent); }
+.deviceIcon { font-size: 24px; margin-bottom: 6px; }
+.deviceId { font-family: var(--mono); font-size: 11px; color: var(--text-muted); margin-bottom: 4px; }
+.packetCount { font-size: 13px; font-weight: 600; color: var(--text); }
+.bridgeBadge {
+  display: inline-block;
+  margin-top: 6px;
+  font-family: var(--mono);
+  font-size: 9px;
+  background: var(--accent);
+  color: #000;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.controls { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 14px; }
+.btnGossip, .btnUpload {
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-family: var(--mono);
+  font-size: 12px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.btnGossip { background: var(--surface2); border: 1px solid var(--border); color: var(--text); }
+.btnGossip:hover:not(:disabled) { border-color: var(--accent); color: var(--accent); }
+.btnUpload { background: var(--accent); color: #000; font-weight: 700; }
+.btnUpload:hover:not(:disabled) { opacity: 0.85; }
+.btnGossip:disabled, .btnUpload:disabled { opacity: 0.4; cursor: not-allowed; }
+.results { display: flex; flex-direction: column; gap: 6px; margin-bottom: 14px; }
+.result { display: flex; gap: 10px; align-items: center; font-family: var(--mono); font-size: 12px; padding: 6px 10px; border-radius: 6px; background: var(--surface2); border: 1px solid var(--border); }
+.settled { border-color: var(--success); }
+.rejected { border-color: var(--danger); }
+.duplicate { border-color: var(--warning); }
+.hash { color: var(--text-muted); }
+.status.settled { color: var(--success); }
+.status.rejected { color: var(--danger); }
+.status.duplicate { color: var(--warning); }
+.reason { color: var(--text-muted); font-size: 11px; }
+.logWrap {}
+.logLabel { font-family: var(--mono); font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; }
+.log { background: var(--bg); border: 1px solid var(--border); border-radius: 6px; padding: 10px; max-height: 160px; overflow-y: auto; display: flex; flex-direction: column; gap: 4px; }
+.logEntry { display: flex; gap: 10px; font-family: var(--mono); font-size: 11px; color: var(--text-muted); }
+.ts { color: var(--accent2); flex-shrink: 0; }
+.empty { color: var(--text-muted); font-family: var(--mono); font-size: 11px; }
